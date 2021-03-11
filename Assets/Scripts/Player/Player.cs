@@ -36,7 +36,6 @@ public class Player : MonoBehaviour
     private void Inputs_movement(object sender, (float, float) e)
     {
         Move(e.Item1, e.Item2);
-        Debug.Log("I am being called!");
     }
 
     public void Move(float vertical, float horizontal)
