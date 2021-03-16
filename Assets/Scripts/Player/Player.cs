@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     {
 
         controller = GetComponent<CharacterController>();
-        Debug.Log(controller.isGrounded);
 
         speed = 15;
 
@@ -47,7 +46,6 @@ public class Player : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection);
             //Multiply it by speed.
             moveDirection *= speed;
-            Debug.Log(moveDirection);
         }
     }
 }
