@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Powerup : MonoBehaviour
 {
     [HideInInspector] public MeshRenderer objectRenderer;
+
+    Shader shadeVFX;
     public abstract void PickedUpPowerUp();
 
     public virtual void Start()
