@@ -17,6 +17,7 @@ public class SpeedPowerUp : Powerup
 
     public override void PickedUpPowerUp()
     {
-       objectRenderer.enabled = false;
+        objectRenderer.enabled = false;
+        powerParticleSystem.gameObject.SetActive(true);
     }
 }

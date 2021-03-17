@@ -5,13 +5,14 @@ using UnityEngine;
 public abstract class Powerup : MonoBehaviour
 {
     [HideInInspector] public MeshRenderer objectRenderer;
-
-    Shader shadeVFX;
+    [HideInInspector] public ParticleSystem powerParticleSystem;
     public abstract void PickedUpPowerUp();
 
     public virtual void Start()
     {
-        objectRenderer = GetComponent<MeshRenderer>(); 
+        objectRenderer = GetComponent<MeshRenderer>();
+        powerParticleSystem = GetComponentInChildren<ParticleSystem>();
+        powerParticleSystem.gameObject.SetActive(false);
     }
     public virtual void OnTriggerEnter(Collider other)
     {
