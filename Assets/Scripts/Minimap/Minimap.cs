@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Minimap : MonoBehaviour
 {
-
-    [SerializeField] Shader minimap;
-
     [SerializeField] Transform player;
     // Start is called before the first frame update
     private void LateUpdate()
