@@ -51,8 +51,10 @@
             float4 frag(v2f i) : SV_Target
             {
                 // sample the texture
-                float4 col = lerp(_Color, _ColorB, 0.50);
-                return col;
+
+                float4 col = lerp(_Color, _ColorB, 0.25);
+                float remapped = saturate(col);
+                return remapped;
             }
             ENDCG
         }
