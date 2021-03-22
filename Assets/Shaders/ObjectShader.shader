@@ -39,6 +39,7 @@
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
+                o.normal = v.normal;
                 o.uv0 = v.uv0;
                 return o;
             }
@@ -50,7 +51,7 @@
             float4 frag(v2f i) : SV_Target
             {
                 // sample the texture
-                float4 col = InverseLerp(_Color,_ColorB,0.50);
+                float4 col = lerp(_Color, _ColorB, 0.50);
                 return col;
             }
             ENDCG
