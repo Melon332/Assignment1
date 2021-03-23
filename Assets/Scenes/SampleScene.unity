@@ -2956,12 +2956,12 @@ GameObject:
   - component: {fileID: 891693618}
   - component: {fileID: 891693617}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MinimapEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &891693616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2978,8 +2978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 293, y: 135.94003}
-  m_SizeDelta: {x: -660.2078, y: -321.07245}
+  m_AnchoredPosition: {x: 292.4, y: 135.39}
+  m_SizeDelta: {x: -654.13586, y: -315.9179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891693617
 MonoBehaviour:
@@ -3166,7 +3166,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 7735
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3515,7 +3515,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063877478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487e049e53b03934680965821ecd1ba6, type: 3}
   m_Name: 
@@ -5540,6 +5540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765092080104820316, guid: 008481e7f1937b34981747daa5f8a30e,
+        type: 3}
+      propertyPath: test
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2765092080104820317, guid: 008481e7f1937b34981747daa5f8a30e,
         type: 3}
