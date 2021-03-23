@@ -5,11 +5,6 @@ using UnityEngine;
 public class SpeedPowerUp : Powerup
 {
 
-    public override void Start()
-    {
-        base.Start();
-    }
-
     public override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);

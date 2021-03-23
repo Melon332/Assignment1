@@ -2,15 +2,24 @@
 {
     Properties
     {
-        _Color ("Color", Color) = (0,0,0,0)
-        _ColorB("ColorB", Color) =(0,0,0,0)
+        _Color("Color", Color) = (0,0,0,0)
+        _ColorB("ColorB", Color) = (0,0,0,0)
+        _Scale("Range", Range(8,1)) = 1
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType" = "Transparent" "Queue" = "Transparent" }
 
         Pass
         {
+            Blend SrcAlpha OneMinusSrcAlpha
+
+
+            Ztest LEqual
+            Zwrite Off
+
+
+
             CGPROGRAM
 
             #pragma vertex vert
@@ -52,9 +61,15 @@
             {
                 // sample the texture
 
-                float4 col = lerp(_Color, _ColorB, 0.25);
-                float remapped = saturate(col);
-                return remapped;
+                float value = distance(i.uv0, float2(0.5,0.5));
+
+            float remapped = InverseLerp(0.25, 0.50, value);
+
+            remapped = saturate(remapped);
+
+            float4 color = lerp(_Color, _ColorB, remapped);
+
+            return color;
             }
             ENDCG
         }

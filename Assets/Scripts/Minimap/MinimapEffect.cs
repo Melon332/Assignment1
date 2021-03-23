@@ -6,14 +6,13 @@ using UnityEngine;
 
 public class MinimapEffect : MonoBehaviour
 {
+    [SerializeField] Camera minimapCamera;
+    [SerializeField] Shader minimapShader;
     private void Start()
     {
-        Camera.main.SetReplacementShader(Shader.Find("MinimapShader"), "RenderType");
+        minimapCamera.SetReplacementShader(minimapShader, "Transparent");
     }
-    private void OnEnable()
-    {
-        Camera.main.SetReplacementShader(Shader.Find("MinimapShader"), "RenderType");
-    }
+
 }
 
 
