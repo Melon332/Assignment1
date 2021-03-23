@@ -4,7 +4,6 @@
     {
         _Color("Color", Color) = (0,0,0,0)
         _ColorB("ColorB", Color) = (0,0,0,0)
-        _Scale("Range", Range(8,1)) = 1
     }
     SubShader
     {
@@ -61,7 +60,7 @@
             {
                 // sample the texture
 
-                float value = distance(i.uv0, float2(0.5,0.5));
+            float value = distance(i.uv0, float2(0.5,0.5));
 
             float remapped = InverseLerp(0.25, 0.50, value);
 
