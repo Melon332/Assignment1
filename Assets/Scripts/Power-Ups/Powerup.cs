@@ -7,6 +7,10 @@ public abstract class Powerup : MonoBehaviour
     [HideInInspector] public MeshRenderer objectRenderer;
     [HideInInspector] public ParticleSystem powerParticleSystem;
     [HideInInspector] public GameObject cameraEffect;
+
+    [SerializeField] float timePassedEffect = 3f;
+
+    bool hasActivatedEffect = false;
     
     public abstract void PickedUpPowerUp();
 
@@ -28,7 +32,7 @@ public abstract class Powerup : MonoBehaviour
     }
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasActivatedEffect)
         {
             PickedUpPowerUp();
             StartCoroutine(showEffect());
@@ -38,7 +42,9 @@ public abstract class Powerup : MonoBehaviour
     IEnumerator showEffect()
     {
         cameraEffect.SetActive(true);
-        yield return new WaitForSeconds(6);
+        hasActivatedEffect = true;
+        yield return new WaitForSeconds(timePassedEffect);
+        hasActivatedEffect = false;
         cameraEffect.SetActive(false);
     }
     IEnumerator referenceEffect()

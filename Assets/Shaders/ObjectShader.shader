@@ -17,8 +17,6 @@
             Ztest LEqual
             Zwrite Off
 
-
-
             CGPROGRAM
 
             #pragma vertex vert
