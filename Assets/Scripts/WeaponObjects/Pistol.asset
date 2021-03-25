@@ -15,7 +15,8 @@ MonoBehaviour:
   weaponName: Pistol
   weaponModel: {fileID: 3027392579720330406, guid: d081d9fc328d7b04482dedfe55d87b70,
     type: 3}
-  fireRate: 1
+  fireRate: 0.2
+  nextFire: 0
   damage: 20
   startingAmmo: 15
   ammoType: 0

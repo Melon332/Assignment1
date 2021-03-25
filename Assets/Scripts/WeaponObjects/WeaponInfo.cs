@@ -11,9 +11,9 @@ public class WeaponInfo : ScriptableObject
     public GameObject weaponModel;
 
     public float fireRate;
+    public float nextFire;
 
     public int damage;
-    public int startingAmmo;
 
     public AmmoType ammoType;
 }
