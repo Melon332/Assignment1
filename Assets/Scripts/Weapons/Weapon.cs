@@ -20,5 +20,8 @@ public abstract class Weapon : MonoBehaviour
         nameOfWeapon = info.weaponName;
         ammoType = info.ammoType;
     }
-    public abstract void Shoot();
+    public virtual void Shoot()
+    {
+
+    }
 }
