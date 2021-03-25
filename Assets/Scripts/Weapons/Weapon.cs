@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] WeaponInfo info;
 
-    [SerializeField] int fireRate;
+    [SerializeField] float fireRate;
     [SerializeField] int damage;
     [SerializeField] int startingAmmo;
     [SerializeField] string nameOfWeapon;
@@ -14,10 +14,11 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     public virtual void Start()
     {
-        fireRate = info._fireRate;
-        damage = info._damage;
-        startingAmmo = info._damage;
-        nameOfWeapon = info._weaponName;
+        fireRate = info.fireRate;
+        damage = info.damage;
+        startingAmmo = info.startingAmmo;
+        nameOfWeapon = info.weaponName;
         ammoType = info.ammoType;
     }
+    public abstract void Shoot();
 }

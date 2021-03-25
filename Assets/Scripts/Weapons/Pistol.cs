@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Pistol : Weapon
 {
+    public override void Shoot()
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
     public override void Start()
     {

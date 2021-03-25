@@ -7,12 +7,14 @@ using UnityEngine;
 public class WeaponInfo : ScriptableObject
 
 {
-    public string _weaponName;
-    public GameObject _weaponModel;
+    public string weaponName;
+    public GameObject weaponModel;
 
-    public int _fireRate;
-    public int _damage;
-    public int _startingAmmo;
+    public float fireRate;
+
+    public int damage;
+    public int startingAmmo;
+
     public AmmoType ammoType;
 }
-   public enum AmmoType { pistolAmmo, rifleAmmo, shells };
+   public enum AmmoType { PISTOL, RIFLE, SHELLS };

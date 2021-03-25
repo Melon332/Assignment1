@@ -2300,7 +2300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656564551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.278, y: -0.628, z: 0.916}
+  m_LocalPosition: {x: 0.278, y: -0.61, z: 1.12}
   m_LocalScale: {x: 0.66285, y: 0.66285, z: 0.66285}
   m_Children: []
   m_Father: {fileID: 963194228}
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSpawnPoint: {fileID: 656564552}
   m4Info: {fileID: 11400000, guid: b30d974c830b04549bbba6a562a7f655, type: 2}
-  pistolInfo: {fileID: 0}
+  pistolInfo: {fileID: 11400000, guid: 769826afec8df9c4ab36c7d5862771e3, type: 2}
 --- !u!1001 &659997843
 PrefabInstance:
   m_ObjectHideFlags: 0

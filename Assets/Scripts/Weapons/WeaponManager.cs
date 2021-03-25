@@ -11,8 +11,8 @@ public class WeaponManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(pistolInfo._weaponModel, weaponSpawnPoint).SetActive(true);
-        Instantiate(m4Info._weaponModel, weaponSpawnPoint).SetActive(false);
+        Instantiate(pistolInfo.weaponModel, weaponSpawnPoint).SetActive(true);
+        Instantiate(m4Info.weaponModel, weaponSpawnPoint).SetActive(false);
     }
 
     // Update is called once per frame

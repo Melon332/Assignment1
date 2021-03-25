@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b701076d5ee5a4647a6dbf4de6f6e4fa, type: 3}
   m_Name: Rifle
   m_EditorClassIdentifier: 
-  _weaponName: M4A1
-  _weaponModel: {fileID: 6218237811521178471, guid: 2c6f3f19683635c4b8b49ac98c1cf770,
+  weaponName: M4A1
+  weaponModel: {fileID: 6218237811521178471, guid: 2c6f3f19683635c4b8b49ac98c1cf770,
     type: 3}
-  _fireRate: 1
-  _damage: 20
-  _startingAmmo: 50
+  fireRate: 0.5
+  damage: 25
+  startingAmmo: 40
+  ammoType: 1
