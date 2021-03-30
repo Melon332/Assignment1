@@ -8,6 +8,7 @@
     SubShader
     {
         Tags { "RenderType" = "Transparent" "Queue" = "Transparent" }
+        Tags { "ForceNoShadowCasting" = "True"}
 
         Pass
         {
@@ -27,14 +28,12 @@
             struct appdata
             {
                 float4 vertex : POSITION;
-                float3 normal : NORMAL;
                 float2 uv0 : TEXCOORD0;
             };
 
             struct v2f
             {
                 float2 uv0 : TEXCOORD1;
-                float3 normal : TEXTCOORD0;
                 float4 vertex : SV_POSITION;
             };
 
@@ -45,7 +44,6 @@
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.normal = v.normal;
                 o.uv0 = v.uv0;
                 return o;
             }
@@ -64,7 +62,15 @@
 
             remapped = saturate(remapped);
 
+            remapped = lerp(_Color, _ColorB, remapped);
+
             float4 color = lerp(_Color, _ColorB, remapped);
+
+            color = saturate(color);
+
+            color = _Color;
+
+            color = lerp(_Color, _ColorB, remapped);
 
             return color;
             }

@@ -46,6 +46,7 @@ public abstract class Powerup : MonoBehaviour
         yield return new WaitForSeconds(timePassedEffect);
         hasActivatedEffect = false;
         cameraEffect.SetActive(false);
+        Destroy(gameObject);
     }
     IEnumerator referenceEffect()
     {
